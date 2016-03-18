@@ -1457,6 +1457,7 @@ void TonemapFeatHLSL::processPix(  Vector<ShaderComponent*> &componentList,
    if (mIsDirect3D11)
    {
       toneMap->setType("SamplerState");
+      toneMapTex = new Var;
       toneMapTex->setName("toneMapTex");
       toneMapTex->setType("Texture2D");
       toneMapTex->uniform = true;
